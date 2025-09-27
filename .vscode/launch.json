@@ -1,0 +1,80 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "EmployeeservicesApplication",
+      "request": "launch",
+      "mainClass": "com.micoroservices.employeeservices.EmployeeservicesApplication"
+    },
+    {
+      "type": "java",
+      "name": "CommonserviceApplication",
+      "request": "launch",
+      "mainClass": "com.microservices.commonservice.CommonserviceApplication"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-BookserviceApplication<bookservice>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.microservices.bookservice.BookserviceApplication",
+      "projectName": "bookservice",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57521 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=bookservice"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DiscoveryserverApplication<discoveryserver>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.microservices.discoveryserver.DiscoveryserverApplication",
+      "projectName": "discoveryserver",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57522 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=discoveryserver"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-CommonserviceApplication<commonservice>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.microservices.commonservice.CommonserviceApplication",
+      "projectName": "commonservice",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57926 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=commonservice"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-EmployeeservicesApplication<employeeservices>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.micoroservices.employeeservices.EmployeeservicesApplication",
+      "projectName": "employeeservices",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50480 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=employeeservices"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-GiftCardApp<giftcard-demo>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "io.axoniq.demo.giftcard.GiftCardApp",
+      "projectName": "giftcard-demo",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-EmployeeserviceApplication<employeeservice>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.microservices.employeeservice.EmployeeserviceApplication",
+      "projectName": "employeeservice",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
