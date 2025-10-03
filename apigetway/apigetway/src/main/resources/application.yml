@@ -3,13 +3,26 @@ server:
 spring:
   application:
     name: gateway-service
+  data:
+    redis:
+      port: 6379
+      host: localhost
   cloud:
-    geteway:
+    gateway:
+      discover:
+        locator:
+          enable: true
       router:
-        - id: employeeservices
-          uri: http://localhost:9002
+        - id: employeeservice
+          uri: lb://employeeservice
           predicates:
             - Path=/api/v1/employee/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 10
+                redis-rate-limiter.burstCapacity: 20
+                redis-rate-limiter.requestedTokens: 1
 
 eureka:
   instance:

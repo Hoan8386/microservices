@@ -74,6 +74,17 @@
       "mainClass": "com.microservices.employeeservice.EmployeeserviceApplication",
       "projectName": "employeeservice",
       "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64264 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=employeeservice"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ApigetwayApplication<apigetway>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.microservices.apigetway.ApigetwayApplication",
+      "projectName": "apigetway",
+      "args": "",
       "envFile": "${workspaceFolder}/.env"
     }
   ]
